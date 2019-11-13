@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sundays.merryaround.board.store.BoardDao">
+	<select id="selectData" resultType="java.lang.String">
+		select customer_id from customer
+	</select>
+</mapper>
