@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<meta content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<body>
+<div class="container">
+  <div id="header">
+      <div class="header">
+        <div id="header_list" class="inner">
+          <!-- session 검사해서 login,logout-->
+          <script>
+            let html = '';
+            if(sessionStorage.getItem('user') === null) {// session이 빈 경우 -> 로그인
+              html = '<li><a href="/login">LOGIN</a></li>';
+            } else {
+              html = '<li><a href="#" onclick="logout()">LOGOUT</a></li>';
+            }
+            document.querySelector('#header_list').insertAdjacentHTML('beforeEnd', html);
+          </script>
+
+          <li><a href="/join">JOIN US</a></li>
+          <li><a href="../member/cart.html">CART</a></li>
+          <li><a href="../board/notice.html">NOTICE</a></li>
+          <!-- <li><a href="">Q&A</a></li> -->
+          <li><a href="../member/myPage.html">MY PAGE</a></li>
+        </div>
+      </div>
+      <div class="title">
+        <div class="inner">
+          <a herf="/main"><h2>SHOPPING MALL</h2></a>
+        </div>
+      </div>
+      <div class="category">
+        <div id="category_list" class="inner">
+          <li><a href="../product/productList.html">BEST</a></li>
+          <li><a href="../product/productList.html">OUTER</a></li>
+          <li><a href="../product/productList.html">KNIT</a></li>
+          <li><a href="../product/productList.html">TOP</a></li>
+          <li><a href="../product/productList.html">BLOUSE</a></li>
+          <li><a href="../product/productList.html">BOTTOM</a></li>
+          <li><a href="../product/productList.html">DRESS</a></li>
+          <li><a href="../product/productList.html">SKIRT</a></li>
+          <li><a href="../product/productList.html">SHOES</a></li>
+          <li><a href="../product/productList.html">BAG</a></li>
+          <li><a href="../product/productList.html">ACC</a></li>
+        </div>
+      </div>
+  </div>
+	JOIN PAGE
+</div>
+<script style="text/javascript" src="js/common.js"></script>
+</body>
+</html>

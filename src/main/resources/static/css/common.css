@@ -1,0 +1,14 @@
+.container {width: 100%;margin:0 auto;}
+
+#header .header {height: 42px;line-height: 42px;font-size: 13px; background: #e8e1d6; }
+#header .inner {position: relative;  margin: 0 auto;  padding: 0 3%;clear: both;}
+#header .category {text-align: center;padding:1% 0;border-top: 1px solid black; border-bottom: 1px solid black;}
+#header .header .inner{float: right;}
+#header .category .inner{display: inline-block;}
+#header .title {padding:2% 2%;}
+#header .title .inner{text-align: center;}
+
+#header .header li {display: inline;padding: 0 5px;}
+#header .category li {display: inline;padding: 0 10px;}
+
+#footer {height: 42px;line-height: 42px;font-size: 13px; background: #e8e1d6;bottom: 0;}

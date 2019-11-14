@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<meta content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<body>
+<div class="container">
+  <div id="header">
+      <div class="header">
+        <div id="header_list" class="inner">
+          <!-- session 검사해서 login,logout-->
+          <script>
+            let html = '';
+            if(sessionStorage.getItem('user') === null) {// session이 빈 경우 -> 로그인
+              html = '<li><a href="/login">LOGIN</a></li>';
+            } else {
+              html = '<li><a href="#" onclick="logout()">LOGOUT</a></li>';
+            }
+            document.querySelector('#header_list').insertAdjacentHTML('beforeEnd', html);
+          </script>
+
+          <li><a href="/join">JOIN US</a></li>
+          <li><a href="../member/cart.html">CART</a></li>
+          <li><a href="../board/notice.html">NOTICE</a></li>
+          <!-- <li><a href="">Q&A</a></li> -->
+          <li><a href="../member/myPage.html">MY PAGE</a></li>
+        </div>
+      </div>
+      <div class="title">
+        <div class="inner">
+          <h2 href="/main">SHOPPING MALL</h2>
+        </div>
+      </div>
+      <div class="category">
+        <div id="category_list" class="inner">
+          <li><a href="../product/productList.html">BEST</a></li>
+          <li><a href="../product/productList.html">OUTER</a></li>
+          <li><a href="../product/productList.html">KNIT</a></li>
+          <li><a href="../product/productList.html">TOP</a></li>
+          <li><a href="../product/productList.html">BLOUSE</a></li>
+          <li><a href="../product/productList.html">BOTTOM</a></li>
+          <li><a href="../product/productList.html">DRESS</a></li>
+          <li><a href="../product/productList.html">SKIRT</a></li>
+          <li><a href="../product/productList.html">SHOES</a></li>
+          <li><a href="../product/productList.html">BAG</a></li>
+          <li><a href="../product/productList.html">ACC</a></li>
+        </div>
+      </div>
+  </div>
+	
+	<div id="contents">
+		<h2>login</h2>
+	</div>	
+<!-- 	<div class="loginHeader">
+            <div class="keyboard">
+                <button type="button" class="btnKey korean" title="korean">한글자판</button>
+                <button type="button" class="btnKey special" title="special">특수문자</button>
+            </div>
+            <div class="view">
+                <div class="korean"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/img_keyboard.png" alt="" width="254"></div>
+                <div class="special"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/img_keyboard_special.png" alt="" width="254"></div>
+            </div>
+     </div> -->
+     <fieldset>
+		<div class="formBox">
+                <div class="form">
+                    <input id="member_id" name="member_id" fw-filter="isFill" fw-label="아이디" fw-msg="" class="inputTypeText" placeholder="아이디" value="" type="text">                    
+                    <input id="member_passwd" name="member_passwd" fw-filter="isFill&amp;isMin[4]&amp;isMax[16]" fw-label="패스워드" fw-msg="" autocomplete="off" value="" type="password" placeholder="패스워드">                </div>
+                <div class="option">
+                    <span class="auto"><input id="use_login_keeping0" name="use_login_keeping" fw-filter="" fw-label="로그인상태유지" fw-msg="" onclick="MemberAction.confirmLoginKeeping(this);" value="T" type="checkbox"><label for="use_login_keeping0">로그인 상태 유지</label></span>
+                    <span class="save"></span>
+                    <span class="ssl"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_ssl.png" alt="보안접속"><em>보안접속</em></span>
+                </div>
+                <div class="btnArea type1">
+                    <button type="button" class="btnSubmit" onclick="MemberAction.login('member_form_2432577213'); return false;">로그인</button>
+                </div>
+                <div class="btnArea type1 displaynone">
+                    <a href="" onclick="" class="btnEm">비회원 구매</a>
+                </div>
+                <div class="btnArea typeLogin">
+                    <a href="/member/id/find_id.html" class="btnLogin">아이디찾기</a>
+                    <a href="/member/passwd/find_passwd_info.html" class="btnLogin">비밀번호찾기</a>
+                    <a href="/member/agreement.html" class="btnLogin">회원가입</a>
+                </div>
+                
+            </div>
+        </fieldset>
+</div>
+</div>
+<script style="text/javascript" src="js/common.js"></script>
+</body>
+</html>
